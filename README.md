@@ -28,7 +28,7 @@ The second argument is passed straight through to the [RequireJS Optimizer](http
 ## Source code
 
 ```js
-module.exports = function requirejs ( inputDir, outputDir, options, done ) {
+module.exports = function requirejs ( inputDir, outputDir, options, done, err ) {
   var path = require( 'path' ), r = require( 'requirejs' );
 
   options = clone( options );
@@ -40,7 +40,7 @@ module.exports = function requirejs ( inputDir, outputDir, options, done ) {
   options.baseUrl = path.join( inputDir, options.baseUrl || '' );
   options.out = path.join( outputDir, options.out );
 
-  r.optimize( options, function () { done(); }, done );
+  r.optimize( options, done, err );
 };
 
 function clone ( source ) {
