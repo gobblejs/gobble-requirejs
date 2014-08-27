@@ -1,6 +1,6 @@
 {
   "name": "gobble-requirejs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Optimise AMD modules with gobble and RequireJS",
   "author": "Rich Harris",
   "dependencies": {
