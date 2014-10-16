@@ -8,5 +8,5 @@ module.exports = function requirejs ( inputdir, outputdir, options, callback ) {
 	options.baseUrl = path.join( inputdir, options.baseUrl || '' );
 	options.out = path.join( outputdir, options.out );
 
-	r.optimize( options, callback, callback );
+	r.optimize( options, function () { callback(); }, callback );
 };
